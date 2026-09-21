@@ -1,0 +1,16 @@
+# Never commit secrets
+.env
+*.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+# Upstream course clone has its own git + venv - keep out of this repo
+lca-lc-foundations/
+# OS
+.DS_Store
+# LangGraph Studio
+.langgraph_api/
