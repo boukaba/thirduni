@@ -57,6 +57,38 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
   (platform owns persistence). Verified auth + interrupt + approve through the API.
   Shown to an outsider: typed own creds first, clicked through the approval panel
   without noticing the pause, kept expecting the dummy inbox to change.
+- RAG: two pipelines (ingestion once, retrieval per question). Reproduced the
+  silent failure: 3072-dim embedding models swapped between indexing and query
+  collapsed top score 0.68 to 0.03, wrong chunks, zero errors. Monitoring plan:
+  golden set, score drift, groundedness sampling, embedding model id in metadata.
+
+## Week 3 lesson coverage (23/23)
+
+| # | Lesson | Covered in |
+|---|--------|------------|
+| 1 | If you cannot pay for the tools | `week3/00-free-tools.md` |
+| 2 | OpenCode, an agent nobody can price you out of | `week3/00-free-tools.md` |
+| 3 | Important, read this before you start | `week3/setup.md` (rules) |
+| 4 | Setup | `week3/setup.md` |
+| 5 | Module 1: Create Agent | `week3/01-foundations.md` (intro) |
+| 6 | Foundational Models | `week3/01-foundations.md` |
+| 7 | Tools | `week3/02-tools.md` |
+| 8 | Short-Term Memory | `week3/03-memory.md` |
+| 9 | Multimodal Messages | `week3/04-multimodal.md` |
+| 10 | Personal Chef Project | `week3/05-chef-to-seller.md` |
+| 11 | Module 2: Advanced Agent | posted in the community (not in repo) |
+| 12 | Model Context Protocol (MCP) | `week3/06-mcp.md` |
+| 13 | Context and State | `week3/07-context-state.md` |
+| 14 | Multi-Agent Systems | `week3/08-multi-agent.md` |
+| 15 | Wedding Planner Project | `week3/09-wedding.md` |
+| 16 | Module 3: Production-Ready Agent | posted in the community (not in repo) |
+| 17 | What is Middleware? | `week3/10-middleware.md` |
+| 18 | Managing Long Conversations | `week3/11-long-conversations.md` |
+| 19 | Human-in-the-Loop | `week3/12-hitl.md` |
+| 20 | Dynamic Agents | `week3/13-dynamic-agents.md` |
+| 21 | Email Assistant Project | `week3/14-email-assistant.md` |
+| 22 | Agent Chat UI | `week3/15-agent-chat-ui.md` |
+| 23 | RAG | `week3/16-rag.md` |
 
 ## Repo layout
 
@@ -64,8 +96,9 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 .env.example            # blanks only — copy to .env and fill locally
 week3/
   seller_agent.py       # e-commerce listing agent (Studio-ready)
-  setup.md              # setup steps + free-tier keys + model swap
-  01-foundations.md     # response object, temp, system prompt
+  setup.md              # rules + setup steps + model swap
+  00-free-tools.md      # free tiers + OpenCode
+  01-foundations.md     # module intro + response object, temp, system prompt
   02-tools.md           # tool loop, Tavily fix
   03-memory.md          # checkpointer + thread_id
   04-multimodal.md      # image Q + injection + frontend guard
@@ -80,6 +113,7 @@ week3/
   13-dynamic-agents.md      # prompt/tools/model switched at runtime
   14-email-assistant.md     # capstone + attack log
   15-agent-chat-ui.md       # Studio + Agent Chat UI, async gotcha
+  16-rag.md                 # two pipelines + silent embedding mismatch
   studio/
     agent.py                # Studio-ready email assistant (async middleware)
     langgraph.json          # graph: assistant
@@ -90,7 +124,7 @@ week3/
   hitl.py               # gated publish: approve, reject, edit
   dynamic_agent.py      # prompt by language, tools by role, model by length
   email_assistant.py    # capstone: auth gate + HITL + forced-injection attack rig
-  lounge-posts.md       # community posts as published
+  rag_pipeline.py       # two pipelines + silent embedding mismatch repro
 ```
 
 Upstream clone lives at `lca-lc-foundations/` locally but is git-ignored here

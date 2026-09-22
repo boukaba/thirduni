@@ -1,5 +1,13 @@
 # Setup (do once, ~20 min)
 
+## Rules from "Important, read this before you start"
+
+- Classes go in order. Do not skip Setup.
+- LangChain asks: no screenshots of class material outside the platform.
+  Posting that you are learning is fine; the lessons stay inside.
+- The intro has a Mark complete button at the bottom; pressing it is the
+  confirmation.
+
 Upstream: https://github.com/langchain-ai/lca-lc-foundations
 
 Local (what I ran):

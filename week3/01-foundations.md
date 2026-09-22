@@ -1,5 +1,18 @@
 # 01 — Foundational Models
 
+## Module 1 intro (from the opening video)
+
+- Shift from Week 2: there you used agents other people built (Claude Code,
+  Cursor, Codex). This module you build one.
+- Spectrum of agency: plain chatbot, then tool-using agent, then high-agency
+  systems (SRE agents, deep research). Tool calling is what separates chat from
+  agent, the same definition Anthropic gave in Week 2, arriving from the other side.
+- Course path: model and system prompt -> tools -> short-term memory ->
+  multimodal -> chef project.
+- Task done: one-sentence build kept small, like the chef. Ours: for independent
+  e-commerce sellers, an agent that takes a product and drafts a listing from
+  trending SEO keywords, removing 30 minutes of writing per product.
+
 Model = conductor. Answer is an object, not a string: `content` + metadata
 (model name, finish reason, token usage). Tokens = bill — cheap model first.
 
