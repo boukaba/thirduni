@@ -44,6 +44,10 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - HITL: gated `publish_listing` only. Approve, reject-with-note (agent rewrote
   and re-interrupted), edit (ran corrected args, no second ask). Default is
   auto-approve, so gating is opt-in.
+- Dynamic agents: `@dynamic_prompt` by language, `@wrap_model_call` tools by
+  role (external never sees internal tool), model switch with tokens side by
+  side (12 vs 400 output, 373 reasoning). DeepSeek reports the same
+  `model_name` for both models now; reasoning tokens are the tell.
 
 ## Repo layout
 
@@ -64,11 +68,13 @@ week3/
   10-middleware.md          # middleware intro + my two doors
   11-long-conversations.md  # token growth, summarization, trim proof
   12-hitl.md                # gate one tool: approve, reject, edit
+  13-dynamic-agents.md      # prompt/tools/model switched at runtime
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
   wedding_team.py       # Module 2 project: coordinator + flights/venue/music
   long_conversations.py # summarization + trim hook, with 22.5C proof
   hitl.py               # gated publish: approve, reject, edit
+  dynamic_agent.py      # prompt by language, tools by role, model by length
   lounge-posts.md       # community posts as published
 ```
 
