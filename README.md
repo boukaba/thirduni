@@ -96,6 +96,7 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 .env.example            # blanks only — copy to .env and fill locally
 week3/
   seller_agent.py       # e-commerce listing agent (Studio-ready)
+  requirements.txt      # minimal deps for running the scripts standalone
   setup.md              # rules + setup steps + model swap
   00-free-tools.md      # free tiers + OpenCode
   01-foundations.md     # module intro + response object, temp, system prompt
@@ -134,10 +135,15 @@ Upstream clone lives at `lca-lc-foundations/` locally but is git-ignored here
 
 1. `git clone https://github.com/boukaba/thirduni.git && cd thirduni`
 2. `cp .env.example .env` — fill `GOOGLE_API_KEY` (aistudio.google.com/apikey,
-   free) and `TAVILY_API_KEY` (app.tavily.com, free). Leave OpenAI empty.
-3. `uv sync` (or `pip install -r requirements.txt` — see upstream)
-4. `uv run python week3/seller_agent.py` — or wire to LangGraph Studio:
-   `langgraph.json` → `"./seller_agent.py:agent"`, then `uv run langgraph dev`.
+   free), `TAVILY_API_KEY` (app.tavily.com, free), and `DEEPSEEK_API_KEY`
+   (api.deepseek.com) for the agent builds. Leave OpenAI empty.
+3. Dependencies, two ways. Recommended: clone the course repo
+   (`lca-lc-foundations`) and run from inside its venv, where everything is
+   already pinned. Standalone: `pip install -r week3/requirements.txt`.
+4. `python week3/seller_agent.py`, or any other script in `week3/`. For the
+   chat UI: copy `week3/studio/` into the course clone as
+   `lca-lc-foundations/notebooks/studio/`, run `uv run langgraph dev` there,
+   then point Agent Chat UI at `http://localhost:2024` (graph `assistant`).
 
 Keys stay in `.env`. Never in chat, notebooks, screenshots, or git.
 
