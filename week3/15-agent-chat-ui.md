@@ -39,7 +39,18 @@ The instructor cloned the open-source UI and changed name/logo with an AI coding
 editor: front end is not his craft, same Week 2 tools as the last mile rather
 than the product. Know your thing properly, use agents for the rest.
 
-## Remaining task
+## Shown to someone outside the cohort (no narration)
 
-Show the assistant to someone outside the cohort, no narration. Log what they
-did and what they tried that I did not expect.
+Observed:
+- Typed their own real credentials first (jsmith@gmail.com). Gate refused; they
+  understood immediately without explanation.
+- Used demo credentials, then bundled jobs: "read inbox and send email".
+- Typo'd recipient "saea"; agent corrected to sara@store.com and said so.
+- The approval panel appeared before each send and was clicked through twice
+  before they realized that pause was the gate. Point at the panel first next time.
+- Kept checking the inbox again expecting new mail. Dummy inbox never changes.
+  Real lesson: the parts you fake get poked at first. Next build: read_inbox
+  returns a second email after a send.
+
+Thread history proof: 2 interrupt checkpoints in the demo thread, one per send,
+each with the pending `send_email` payload. Resumed only after approval.

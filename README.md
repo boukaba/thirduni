@@ -55,6 +55,8 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - Agent Chat UI: capstone put behind a real chat front end. Studio boot gotchas:
   wrap-style middleware must be async in a `.py` file, and no custom checkpointer
   (platform owns persistence). Verified auth + interrupt + approve through the API.
+  Shown to an outsider: typed own creds first, clicked through the approval panel
+  without noticing the pause, kept expecting the dummy inbox to change.
 
 ## Repo layout
 
