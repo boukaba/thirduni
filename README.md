@@ -34,6 +34,9 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - Multi-agent: supervisor + specialists as tools. Wiring proved on math,
   real split proved on seller (keywords → listing). Boss printout hides
   internals — tracing required once layered.
+- Middleware: functions inside the loop. Seller doors mapped: human approval
+  before publish, regulated-claims classifier after the answer. Decorators
+  (`before_model`, `after_model`, `wrap_model_call`) verified present.
 
 ## Repo layout
 
@@ -51,6 +54,7 @@ week3/
   07-context-state.md   # context vs state, tier vs taste
   08-multi-agent.md       # supervisor + researcher/writer team
   09-wedding.md             # Module 2 project: coordinator + 3 specialists
+  10-middleware.md          # middleware intro + my two doors
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
   wedding_team.py       # Module 2 project: coordinator + flights/venue/music
@@ -82,4 +86,5 @@ Same shape powers tender compliance (PDF in → missing-docs checklist out).
 
 Week 3 Module 2 done: MCP + context/state + multi-agent + wedding team
 (easyJet ~$33, Primard 80-guest, 5 rock tracks; runs on DeepSeek `deepseek-chat`).
-Next: Module 3 (middleware, HITL, email assistant).
+Module 3 in progress: middleware doors written; next long conversations, HITL,
+email assistant.
