@@ -37,6 +37,10 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - Middleware: functions inside the loop. Seller doors mapped: human approval
   before publish, regulated-claims classifier after the answer. Decorators
   (`before_model`, `after_model`, `wrap_model_call`) verified present.
+- Long conversations: input tokens 20 → 2907 over six turns. Summarization via
+  `SummarizationMiddleware` (tuple trigger/keep); trim via `before_agent` hook.
+  Two gotchas: deletion needs `RemoveMessage`, and tool exchanges must go as a
+  pair (dangling `tool_calls` break OpenAI-compatible APIs).
 
 ## Repo layout
 
@@ -55,9 +59,11 @@ week3/
   08-multi-agent.md       # supervisor + researcher/writer team
   09-wedding.md             # Module 2 project: coordinator + 3 specialists
   10-middleware.md          # middleware intro + my two doors
+  11-long-conversations.md  # token growth, summarization, trim proof
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
   wedding_team.py       # Module 2 project: coordinator + flights/venue/music
+  long_conversations.py # summarization + trim hook, with 22.5C proof
   lounge-posts.md       # community posts as published
 ```
 
