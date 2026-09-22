@@ -24,6 +24,4 @@ Lessons learned:
 - Notebooks target OpenAI; swap one line to Gemini:
   `init_chat_model(model='gemini-3-flash-preview', model_provider='google_genai')`
 - `gemini-2.0-flash` / `2.5-flash` return 404 (retired). Use `gemini-3-flash-preview`.
-- Free Gemini quota ~20 req/day/model. Hit `429 RESOURCE_EXHAUSTED`, rotated key.
-  Fallback ready: local Ollama (`qwen3:8b`, `llama3`) — no key, private.
 - `.env` is git-ignored. Keys never in chat, notebooks, screenshots, or git.

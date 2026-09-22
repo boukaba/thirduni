@@ -13,8 +13,8 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - Model swap: notebooks target `gpt-5-nano`, I run `gemini-3-flash-preview` via
   `init_chat_model(..., model_provider='google_genai')`. Note: `gemini-2.0-flash`
   and `gemini-2.5-flash` are retired (404) — use `gemini-3-flash-preview`.
-- Quota lesson: free Gemini allows ~20 req/day per model. Hit `429 RESOURCE_EXHAUSTED`,
-  rotated key, kept building. Fallback ready: local Ollama (`qwen3:8b`, `llama3`).
+- MCP: `seller_mcp` (stdio, 1 tool) + public `mcp-server-time` via `uvx`
+  (no key). One prompt → agent called both. Server reusable by any MCP app.
 - Tools = what separates chat from agent: function + `@tool` + name/description
   the model reads. Vague description is a bug.
 - Loop visible: `Human → AI [] + tool_calls → ToolMessage → Final`.
@@ -41,6 +41,8 @@ week3/
   03-memory.md          # checkpointer + thread_id
   04-multimodal.md      # image Q + injection + frontend guard
   05-chef-to-seller.md  # chef build + domain swap + Studio
+  06-mcp.md             # seller_mcp server + time server via uvx
+  seller_mcp.py         # MCP server: listing_title tool (stdio)
   lounge-posts.md       # community posts as published
 ```
 
@@ -67,4 +69,4 @@ For independent e-commerce sellers: photo of product in → trending SEO keyword
 via search → title + 2-sentence listing out. Removes 30 min of writing.
 Same shape powers tender compliance (PDF in → missing-docs checklist out).
 
-Week 3 Module 2 next: MCP, custom state, multi-agent.
+Week 3 Module 2 in progress: MCP done, next runtime context / custom state, then multi-agent.
