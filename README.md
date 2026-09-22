@@ -41,7 +41,7 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 .env.example            # blanks only — copy to .env and fill locally
 week3/
   seller_agent.py       # e-commerce listing agent (Studio-ready)
-  setup.md              # setup steps + quota + model swap
+  setup.md              # setup steps + free-tier keys + model swap
   01-foundations.md     # response object, temp, system prompt
   02-tools.md           # tool loop, Tavily fix
   03-memory.md          # checkpointer + thread_id
@@ -50,8 +50,10 @@ week3/
   06-mcp.md             # seller_mcp server + time server via uvx
   07-context-state.md   # context vs state, tier vs taste
   08-multi-agent.md       # supervisor + researcher/writer team
+  09-wedding.md             # Module 2 project: coordinator + 3 specialists
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
+  wedding_team.py       # Module 2 project: coordinator + flights/venue/music
   lounge-posts.md       # community posts as published
 ```
 
@@ -78,4 +80,6 @@ For independent e-commerce sellers: photo of product in → trending SEO keyword
 via search → title + 2-sentence listing out. Removes 30 min of writing.
 Same shape powers tender compliance (PDF in → missing-docs checklist out).
 
-Week 3 Module 2 done: MCP + context/state + multi-agent. Next: wedding planner project.
+Week 3 Module 2 done: MCP + context/state + multi-agent + wedding team
+(easyJet ~$33, Primard 80-guest, 5 rock tracks; runs on DeepSeek `deepseek-chat`).
+Next: Module 3 (middleware, HITL, email assistant).
