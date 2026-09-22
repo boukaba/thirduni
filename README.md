@@ -31,6 +31,9 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - Context vs State: context (tier, language) immutable with defaults, visible only
   via tool runtime; state (preferred category) mutable via `Command`, no defaults.
   Sort rule: can it change?
+- Multi-agent: supervisor + specialists as tools. Wiring proved on math,
+  real split proved on seller (keywords → listing). Boss printout hides
+  internals — tracing required once layered.
 
 ## Repo layout
 
@@ -46,7 +49,9 @@ week3/
   05-chef-to-seller.md  # chef build + domain swap + Studio
   06-mcp.md             # seller_mcp server + time server via uvx
   07-context-state.md   # context vs state, tier vs taste
+  08-multi-agent.md       # supervisor + researcher/writer team
   seller_mcp.py         # MCP server: listing_title tool (stdio)
+  seller_team.py        # multi-agent: boss + keyword researcher + writer
   lounge-posts.md       # community posts as published
 ```
 
@@ -73,4 +78,4 @@ For independent e-commerce sellers: photo of product in → trending SEO keyword
 via search → title + 2-sentence listing out. Removes 30 min of writing.
 Same shape powers tender compliance (PDF in → missing-docs checklist out).
 
-Week 3 Module 2 in progress: MCP + context/state done, next multi-agent.
+Week 3 Module 2 done: MCP + context/state + multi-agent. Next: wedding planner project.
