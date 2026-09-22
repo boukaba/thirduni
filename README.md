@@ -28,6 +28,9 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 - Chef → Seller: same 4 pieces (search tool, system prompt, model+tool+checkpointer,
   thread_id). Chef did 2 searches unprompted. Seller drafts SEO listing + mobile
   follow-up with memory.
+- Context vs State: context (tier, language) immutable with defaults, visible only
+  via tool runtime; state (preferred category) mutable via `Command`, no defaults.
+  Sort rule: can it change?
 
 ## Repo layout
 
@@ -42,6 +45,7 @@ week3/
   04-multimodal.md      # image Q + injection + frontend guard
   05-chef-to-seller.md  # chef build + domain swap + Studio
   06-mcp.md             # seller_mcp server + time server via uvx
+  07-context-state.md   # context vs state, tier vs taste
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   lounge-posts.md       # community posts as published
 ```
@@ -69,4 +73,4 @@ For independent e-commerce sellers: photo of product in → trending SEO keyword
 via search → title + 2-sentence listing out. Removes 30 min of writing.
 Same shape powers tender compliance (PDF in → missing-docs checklist out).
 
-Week 3 Module 2 in progress: MCP done, next runtime context / custom state, then multi-agent.
+Week 3 Module 2 in progress: MCP + context/state done, next multi-agent.
