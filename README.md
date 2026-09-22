@@ -41,6 +41,9 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
   `SummarizationMiddleware` (tuple trigger/keep); trim via `before_agent` hook.
   Two gotchas: deletion needs `RemoveMessage`, and tool exchanges must go as a
   pair (dangling `tool_calls` break OpenAI-compatible APIs).
+- HITL: gated `publish_listing` only. Approve, reject-with-note (agent rewrote
+  and re-interrupted), edit (ran corrected args, no second ask). Default is
+  auto-approve, so gating is opt-in.
 
 ## Repo layout
 
@@ -60,10 +63,12 @@ week3/
   09-wedding.md             # Module 2 project: coordinator + 3 specialists
   10-middleware.md          # middleware intro + my two doors
   11-long-conversations.md  # token growth, summarization, trim proof
+  12-hitl.md                # gate one tool: approve, reject, edit
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
   wedding_team.py       # Module 2 project: coordinator + flights/venue/music
   long_conversations.py # summarization + trim hook, with 22.5C proof
+  hitl.py               # gated publish: approve, reject, edit
   lounge-posts.md       # community posts as published
 ```
 
