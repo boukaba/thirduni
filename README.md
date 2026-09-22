@@ -52,6 +52,9 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
   on send. Attack log: skip-auth injection, unauth send, password leak, wrong
   password all held. Forced `tool_choice` injection still hit the interrupt and
   nothing sent. Model judgment is a bonus; the tool-boundary gate is the control.
+- Agent Chat UI: capstone put behind a real chat front end. Studio boot gotchas:
+  wrap-style middleware must be async in a `.py` file, and no custom checkpointer
+  (platform owns persistence). Verified auth + interrupt + approve through the API.
 
 ## Repo layout
 
@@ -74,6 +77,10 @@ week3/
   12-hitl.md                # gate one tool: approve, reject, edit
   13-dynamic-agents.md      # prompt/tools/model switched at runtime
   14-email-assistant.md     # capstone + attack log
+  15-agent-chat-ui.md       # Studio + Agent Chat UI, async gotcha
+  studio/
+    agent.py                # Studio-ready email assistant (async middleware)
+    langgraph.json          # graph: assistant
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
   wedding_team.py       # Module 2 project: coordinator + flights/venue/music
@@ -110,4 +117,5 @@ Same shape powers tender compliance (PDF in → missing-docs checklist out).
 Week 3 Module 2 done: MCP + context/state + multi-agent + wedding team
 (easyJet ~$33, Primard 80-guest, 5 rock tracks; runs on DeepSeek `deepseek-chat`).
 Module 3 done: middleware, long conversations, HITL, dynamic agents, email
-assistant attacked (forced injection still hit the approval gate).
+assistant attacked (forced injection still hit the approval gate), and a real
+chat UI on top (Studio + Agent Chat UI).
