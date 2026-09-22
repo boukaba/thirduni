@@ -48,6 +48,10 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
   role (external never sees internal tool), model switch with tokens side by
   side (12 vs 400 output, 373 reasoning). DeepSeek reports the same
   `model_name` for both models now; reasoning tokens are the tell.
+- Email assistant capstone: auth-before-inbox via dynamic tool filtering, HITL
+  on send. Attack log: skip-auth injection, unauth send, password leak, wrong
+  password all held. Forced `tool_choice` injection still hit the interrupt and
+  nothing sent. Model judgment is a bonus; the tool-boundary gate is the control.
 
 ## Repo layout
 
@@ -69,12 +73,14 @@ week3/
   11-long-conversations.md  # token growth, summarization, trim proof
   12-hitl.md                # gate one tool: approve, reject, edit
   13-dynamic-agents.md      # prompt/tools/model switched at runtime
+  14-email-assistant.md     # capstone + attack log
   seller_mcp.py         # MCP server: listing_title tool (stdio)
   seller_team.py        # multi-agent: boss + keyword researcher + writer
   wedding_team.py       # Module 2 project: coordinator + flights/venue/music
   long_conversations.py # summarization + trim hook, with 22.5C proof
   hitl.py               # gated publish: approve, reject, edit
   dynamic_agent.py      # prompt by language, tools by role, model by length
+  email_assistant.py    # capstone: auth gate + HITL + forced-injection attack rig
   lounge-posts.md       # community posts as published
 ```
 
@@ -103,5 +109,5 @@ Same shape powers tender compliance (PDF in → missing-docs checklist out).
 
 Week 3 Module 2 done: MCP + context/state + multi-agent + wedding team
 (easyJet ~$33, Primard 80-guest, 5 rock tracks; runs on DeepSeek `deepseek-chat`).
-Module 3 in progress: middleware doors written; next long conversations, HITL,
-email assistant.
+Module 3 done: middleware, long conversations, HITL, dynamic agents, email
+assistant attacked (forced injection still hit the approval gate).
