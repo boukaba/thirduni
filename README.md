@@ -1,7 +1,6 @@
-# Thirduni — Week 3: Building Agents with LangChain
+# Thirduni — Building Agents, Products & Security with LangChain
 
-Systems + product track. Week 2 used other people's agents (Claude Code, Cursor, Codex).
-Week 3 builds your own: model → tools → memory → multimodal → shipped project.
+Week 3: build your own agents. Week 4: think like a product architect, pitch like a winner, and defend like a security-minded developer.
 
 Upstream course: `langchain-ai/lca-lc-foundations` (LangChain Academy, with Thirduni).
 This repo holds **my working code + notes**. No keys, no screenshots of course material.
@@ -90,6 +89,19 @@ This repo holds **my working code + notes**. No keys, no screenshots of course m
 | 22 | Agent Chat UI | `week3/15-agent-chat-ui.md` |
 | 23 | RAG | `week3/16-rag.md` |
 
+## Week 4 — Product Thinking, Pitching & Security
+
+| # | Lesson | Covered in |
+|---|--------|------------|
+| 1 | Storytelling (Victor) | `week4/README.md` |
+| 2 | The Pitch (Daniel) | `week4/README.md` |
+| 3 | Think Like a Product Architect (Souheila) | `week4/README.md` |
+| 4 | Food Waste in Algeria (Souheila) | `week4/README.md` |
+| 5 | Zero to Verified (Joe / NEAR) | `week4/README.md` |
+| 6 | Backend Security: STRIDE + OWASP | `week4/README.md` + completed exercises |
+
+Week 4 takeaways: think like an attacker, design like a defender. STRIDE predicts, OWASP diagnoses. Problem first, technology second. Package wins, not just code.
+
 ## Repo layout
 
 ```
@@ -126,6 +138,13 @@ week3/
   dynamic_agent.py      # prompt by language, tools by role, model by length
   email_assistant.py    # capstone: auth gate + HITL + forced-injection attack rig
   rag_pipeline.py       # two pipelines + silent embedding mismatch repro
+week4/
+  README.md             # week 4 summary: storytelling, pitch, product, security
+  realtomatic.md        # Realtomatic project page + YouTube pitch deck
+  stride_challenge.md   # completed STRIDE exercise (QuickBite)
+  feature_threats.md    # completed feature threat exercise (student upload)
+  feature_threats_2.md  # completed feature threat exercise (teacher feedback)
+  owasp_challenge.md    # completed OWASP bug triage (6 bugs)
 ```
 
 Upstream clone lives at `lca-lc-foundations/` locally but is git-ignored here
@@ -161,3 +180,7 @@ Week 3 Module 2 done: MCP + context/state + multi-agent + wedding team
 Module 3 done: middleware, long conversations, HITL, dynamic agents, email
 assistant attacked (forced injection still hit the approval gate), and a real
 chat UI on top (Studio + Agent Chat UI).
+
+Week 4 done: storytelling, pitch, product architect, food waste, zero-to-verified,
+and the full security section (STRIDE + OWASP). Realtomatic project page with
+YouTube pitch deck in `week4/realtomatic.md`.
